@@ -1,10 +1,9 @@
-import React from 'react';
 import './App.css';
-import SingUp from './pages/SignUp';
+import Routes from './routes';
 
 function App() {
   return (
-    <SingUp></SingUp>
+    <Routes/>
   );
 }
 
