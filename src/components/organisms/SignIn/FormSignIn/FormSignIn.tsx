@@ -1,9 +1,12 @@
 import FormHeader from "../../../ molecules/SignIn/FormHeader"
+import * as S from  './style'
 
 
 const FormSignIn = () => {
     return (
-        <FormHeader></FormHeader>
+        <S.Wrapper>
+            <FormHeader></FormHeader>
+        </S.Wrapper>
     )
 }
 

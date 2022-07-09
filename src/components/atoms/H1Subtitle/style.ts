@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.h1`
-    padding: 10%;
+    font-size: 12px;
+    font-weight: 300;
 `

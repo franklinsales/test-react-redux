@@ -1,12 +1,12 @@
 import * as S from "./style"
-interface IH1Form {
+interface IH1SubtitleForm {
     children?: React.ReactNode
 }
 
-const H1Form = ({children}: IH1Form) => {
+const H1Subtitle = ({children}: IH1SubtitleForm) => {
     return (
         <S.Wrapper>{children}</S.Wrapper>
     )
 }
 
-export default H1Form
+export default H1Subtitle
