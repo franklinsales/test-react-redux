@@ -1,5 +1,5 @@
 import FormSignUp from '../../organisms/SignUp/FormSignUp'
-import FormSearchUser from '../../organisms/SignUp/FormSearchUser'
+import SearchUserForm from '../../organisms/SignUp/SearchForm'
 import * as S from './style'
 
 const SignUpTemplate = () => {
@@ -9,7 +9,7 @@ const SignUpTemplate = () => {
                 <FormSignUp></FormSignUp>
             </S.FormWrappe>
             <S.HeroWrappe>
-                <FormSearchUser/>
+                <SearchUserForm />
             </S.HeroWrappe>
         </S.ContentWrapped>
     )
