@@ -1,13 +1,17 @@
 import * as S from "./style"
 interface IInputIcon extends S.IWrapper{
+    labelText?: string
     children?: React.ReactNode
 }
 
-const InputIcon = ({children, marginBottom, marginTop}: IInputIcon) => {
+const InputIcon = ({labelText, children, marginBottom, marginTop}: IInputIcon) => {
     return (
         <S.Wrapper marginBottom={marginBottom} marginTop={marginTop}>
-            <S.SpanWrapper>https://</S.SpanWrapper>
-            <S.InputWrapper type="text" placeholder="domain.tld" /> 
+            <label> {labelText} </label>
+            <S.WrapperInput>
+                <S.SpanWrapper>https://</S.SpanWrapper>
+                <S.InputWrapper type="text" placeholder="domain.tld" /> 
+            </S.WrapperInput>
         </S.Wrapper>
     )
 }

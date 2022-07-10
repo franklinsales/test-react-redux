@@ -9,8 +9,24 @@ export const Wrapper = styled.div<IWrapper>`
     width: 100%;
     position: relative;
     display: flex;
+    flex-direction: column;
+
     margin-bottom: ${props => props.marginBottom || "20px"};
     margin-top: ${props => props.marginTop || "20px"};
+
+    label {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+`
+
+export const WrapperInput = styled.div<IWrapper>`
+
+    width: 100%;
+    position: relative;
+    display: flex;
 
     & > span,
     input {
