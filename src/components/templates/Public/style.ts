@@ -12,7 +12,6 @@ export const ContentWrapped = styled.div`
 export const FormWrappe = styled.div`
     width: 50%;
     height: 100%;
-    background-color: #ccc;
 
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
