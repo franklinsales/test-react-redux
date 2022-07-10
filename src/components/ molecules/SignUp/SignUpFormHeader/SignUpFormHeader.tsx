@@ -1,7 +1,7 @@
 import H1Form from "../../../atoms/H1Form"
 import H1Subtitle from "../../../atoms/H1Subtitle"
 
-export const FormHeader = () => {
+export const SignUpFormHeader = () => {
     return (
         <>
             <H1Form> Cadastre-se no MagicSys </H1Form>
@@ -10,4 +10,4 @@ export const FormHeader = () => {
     )
 }
 
-export default FormHeader
+export default SignUpFormHeader

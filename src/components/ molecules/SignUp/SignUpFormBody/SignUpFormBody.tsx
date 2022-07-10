@@ -2,7 +2,7 @@ import ButtonForm from "../../../atoms/ButtonForm"
 import InputIcon from "../../../atoms/InputIcon"
 import * as S from "./style"
 
-const FormBody = () => {
+const SignUpFormBody = () => {
 
     const submitOnClick = () =>{
         console.debug("CLICOU")
@@ -18,4 +18,4 @@ const FormBody = () => {
     )
 }
 
-export default FormBody
+export default SignUpFormBody
