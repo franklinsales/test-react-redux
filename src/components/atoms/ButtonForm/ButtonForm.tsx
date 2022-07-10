@@ -1,14 +1,12 @@
 import * as S from "./style"
-interface IButtonForm {
+interface IButtonForm extends React.ComponentPropsWithoutRef<"button">{
 
-    onClick: () => void
-
-    children?: React.ReactNode
+    onClick?: () => void
 }
 
-const ButtonForm = ({children, onClick}: IButtonForm) => {
+const ButtonForm = ({children, onClick, ...props}: IButtonForm) => {
     return (
-        <S.Wrapper onClick={onClick}>{children}</S.Wrapper>
+        <S.Wrapper onClick={onClick} {...props}>{children}</S.Wrapper>
     )
 }
 

@@ -1,10 +1,9 @@
 import * as S from "./style"
-interface IInputIcon extends S.IWrapper{
+interface IInputIcon extends S.IWrapper, React.ComponentPropsWithoutRef<"input">{
     labelText?: string
-    children?: React.ReactNode
 }
 
-const InputIcon = ({labelText, children, marginBottom, marginTop}: IInputIcon) => {
+const InputIcon = ({labelText, marginBottom, marginTop}: IInputIcon) => {
     return (
         <S.Wrapper marginBottom={marginBottom} marginTop={marginTop}>
             <label> {labelText} </label>

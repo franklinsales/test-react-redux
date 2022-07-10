@@ -8,11 +8,18 @@ const FormBody = () => {
         console.debug("CLICOU")
     }
 
+    const submitFormHandler = (e:any) => {
+        e.preventDefault()
+        console.debug(e)
+    }
+
     return (
         <S.Wrapper>
-            <InputIcon></InputIcon>
-            <InputIcon></InputIcon>
-            <ButtonForm onClick={submitOnClick}>Sign In</ButtonForm>
+            <form onSubmit={(e) => {submitFormHandler(e)}}>
+                <InputIcon name="username"></InputIcon>
+                <InputIcon name="username"></InputIcon>
+                <ButtonForm type={"submit"}>Sign In</ButtonForm>
+            </form>
         </S.Wrapper>
     )
 }
