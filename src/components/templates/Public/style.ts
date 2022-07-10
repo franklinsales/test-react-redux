@@ -20,7 +20,6 @@ export const FormWrappe = styled.div`
 export const HeroWrappe = styled.div`
     width: 50%;
     height: 100%;
-    background-color: #000;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 `

@@ -50,8 +50,8 @@ export const Wrapper = styled.div<IWrapper>`
     &:focus-within {
         & > span {
             color: #fff;
-            background: #678EFE;
-            border-color: #275EFE;
+            background: #1f27ea;
+            border-color: #1f27ea;
         }
     }
 `
@@ -67,15 +67,15 @@ export const InputWrapper = styled.input`
     border-radius: 6px;
     -webkit-appearance: none;
     color: #99A3BA;
-    border: 1px solid #CDD9ED;
+    border: 1px solid #1f27ea;
     background: #fff;
     transition: border .3s ease;
     &::placeholder {
-        color: #CBD1DC;
+        color: #1f27ea;
     }
     &:focus {
         outline: none;
-        border-color: #275EFE;
+        border-color: #1f27ea;
     }
 `
 
