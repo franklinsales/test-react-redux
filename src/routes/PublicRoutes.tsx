@@ -9,7 +9,7 @@ const PublicRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<SignIn/>} />
-        <Route path="/sing-up" element={<SingUp/>} />
+        <Route path="/sign-up" element={<SingUp/>} />
       </Routes>
     </BrowserRouter>
   );

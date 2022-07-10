@@ -1,8 +1,11 @@
+import LayoutBoxRounded from "../../components/templates/LayoutBoxRounded"
+import SignUpTemplate from "../../components/templates/Public/SignUpTemplate"
+
 const SignUp= () => {
     return(
-        <>
-            <h1>Página de Sign Up</h1>
-        </>
+        <LayoutBoxRounded>
+            <SignUpTemplate />
+        </LayoutBoxRounded>
     )
 }
 
