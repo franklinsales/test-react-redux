@@ -1,5 +1,5 @@
-import SignUpFormBody from "../../../ molecules/SignUp/SignUpFormBody"
-import SignUpFormHeader from "../../../ molecules/SignUp/SignUpFormHeader"
+import SignUpFormBody from "../../../molecules/SignUp/SignUpFormBody"
+import SignUpFormHeader from "../../../molecules/SignUp/SignUpFormHeader"
 import * as S from  './style'
 
 

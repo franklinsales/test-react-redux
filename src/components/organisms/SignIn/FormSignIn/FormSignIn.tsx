@@ -1,5 +1,5 @@
-import FormBody from "../../../ molecules/SignIn/FormBody"
-import FormHeader from "../../../ molecules/SignIn/FormHeader"
+import FormBody from "../../../molecules/SignIn/FormBody"
+import FormHeader from "../../../molecules/SignIn/FormHeader"
 import * as S from  './style'
 
 
