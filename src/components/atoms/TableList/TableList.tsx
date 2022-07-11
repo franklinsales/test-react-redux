@@ -1,12 +1,16 @@
 const TableList = () => {
     return (
         <table>
-            <tr>
-                <th>Nome Usuário</th>
-            </tr>
-            <tr>
-                <td>Alfreds Futterkiste</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Nome Usuário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                </tr>
+            </tbody>
         </table>
     )
 }

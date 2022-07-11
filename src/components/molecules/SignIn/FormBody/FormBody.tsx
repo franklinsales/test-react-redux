@@ -40,8 +40,8 @@ const FormBody = () => {
         <S.Wrapper>
             {login && console.debug("login template", login)}
             <form onSubmit={submitFormHandler}>
-                <InputIcon name="username" onChange={usernameChangeHandler}></InputIcon>
-                <InputIcon name="password" onChange={passwordChangeHandler}></InputIcon>
+                <InputIcon name="username" labelText="Username:" onChange={usernameChangeHandler}></InputIcon>
+                <InputIcon name="password" labelText="Password:" onChange={passwordChangeHandler}></InputIcon>
                 <ButtonForm type={"submit"}>Sign In</ButtonForm>
                 {login?.error === "user invalid" && <S.ErrorWrapper>Usuário inválido! Tente novamente.</S.ErrorWrapper>}
             </form>

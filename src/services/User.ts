@@ -1,16 +1,28 @@
 import User from "../types/User/User";
 import Login from "../types/Login/Login";
 
-export const registerUserService = (data:User): User[] => {
+export const registerUserService = (payload:any): User[] => {
   // Here would be a call to the API to register the user, but I'm pretending it saving the user in localstorage
 
-  const usersStr = window.localStorage.getItem("users");
-  const users: User[] = JSON.parse((usersStr || ""));
+  const data: User = payload?.user
 
+  const usersStr = window.localStorage.getItem("users");
+  const users: User[] = usersStr ? JSON.parse(usersStr) : [];
+  
+  const usersResult = users.filter((i)=>{
+    return data.username === i.username
+  })
+
+  if(usersResult.length > 0){
+    return users
+  }  
+
+  data.id = (users.length) + 1
   users.push(data)
 
   window.localStorage.setItem("users", JSON.stringify(users));
 
+  console.debug("final users", users)
   return users
   
 };
