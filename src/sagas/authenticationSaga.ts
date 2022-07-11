@@ -15,11 +15,16 @@ export function* registerSaga(payload:any): any {
 }
 
 export function* loginSaga(payload:any): any {
+  console.debug("loginSaga(payload:any) called", payload)
   try {
     const response = yield call(loginUserService, payload);
-    yield [
-      put({ type: types.LOGIN_USER_SUCCESS, response })
-    ];
+    console.debug("loginSaga response", response)
+    if(!response){
+      throw new Error("User Invalid");
+    }
+    console.debug("yield", "LOGIN_USER_SUCCESS")
+    yield put({ type: types.LOGIN_USER_SUCCESS, response })
+    ;
   } catch(error) {
     yield put({ type: types.LOGIN_USER_ERROR, error })
   }
