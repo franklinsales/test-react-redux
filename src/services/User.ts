@@ -1,6 +1,7 @@
 import User from "../types/User/User";
 import Login from "../types/Login/Login";
 import Register from "../types/Register/Register";
+import SearchUser from "../types/SearchUser/SearchUser";
 
 export const registerUserService = (payload:any): Register => {
   // Here would be a call to the API to register the user, but I'm pretending it saving the user in localstorage
@@ -58,3 +59,26 @@ export const loginUserService = (payload:any): Login | null => {
 
   return loginResult
 };
+
+
+export const searchUsers = (payload:any): User[] => {
+  console.debug("searchUsers() called", payload)
+
+  const data:SearchUser = payload.searchUser
+
+  console.debug("data", data)
+
+  const usersStr = window.localStorage.getItem("users");
+  let users: User[] = []
+
+  if(!data.username){
+   return usersStr ? JSON.parse(usersStr) : usersStr;
+  }
+
+  users = users.filter((i)=>{
+    return data.username === i.username
+  })
+
+  return users
+  
+}
