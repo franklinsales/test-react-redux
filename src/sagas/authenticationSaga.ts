@@ -17,8 +17,8 @@ export function* loginSaga(payload:any): any {
   try {
     const response = yield call(loginUserService, payload);
     console.debug("loginSaga response", response)
-    if(!response){
-      throw new Error("User Invalid");
+    if(response.error){
+      yield put({ type: types.LOGIN_USER_ERROR, response })
     }
     console.debug("yield", "LOGIN_USER_SUCCESS")
     yield put({ type: types.LOGIN_USER_SUCCESS, response })

@@ -45,7 +45,8 @@ export const loginUserService = (payload:any): Login | null => {
       return data.username === i.username && data.password === i.password
     })
 
-    if(loginResult){
+    if(usersResult.length > 0){
+      console.debug("users result", usersResult)
       loginResult = {error: null, user: usersResult[0]}
       return loginResult
     }else{
