@@ -2,7 +2,7 @@ import User from "../User/User"
 
 interface Register {
     error?: string | null
-    user?: User
+    user?: User[]
 }
 
 export default Register

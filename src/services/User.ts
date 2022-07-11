@@ -1,7 +1,8 @@
 import User from "../types/User/User";
 import Login from "../types/Login/Login";
+import Register from "../types/Register/Register";
 
-export const registerUserService = (payload:any): User[] => {
+export const registerUserService = (payload:any): Register => {
   // Here would be a call to the API to register the user, but I'm pretending it saving the user in localstorage
 
   const data: User = payload?.user
@@ -14,7 +15,7 @@ export const registerUserService = (payload:any): User[] => {
   })
 
   if(usersResult.length > 0){
-    return users
+    return {error: "user already exists", user: users}
   }  
 
   data.id = (users.length) + 1
@@ -23,7 +24,7 @@ export const registerUserService = (payload:any): User[] => {
   window.localStorage.setItem("users", JSON.stringify(users));
 
   console.debug("final users", users)
-  return users
+  return {error: null, user: users}
   
 };
 

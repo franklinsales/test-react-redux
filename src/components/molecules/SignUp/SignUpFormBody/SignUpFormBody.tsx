@@ -13,7 +13,7 @@ const SignUpFormBody = () => {
 
     const [formData, setFormData] = useState<User>({} as User)
     const dispatch = useDispatch()
-    const login = useSelector((state: any) => state.login.response)
+    const register = useSelector((state: any) => state.register.response)
 
     const submitFormHandler = (e:any) => {
         e.preventDefault()
@@ -36,6 +36,10 @@ const SignUpFormBody = () => {
             console.error("Password and Password Confirmation are not equal")
         }
     }
+
+    useEffect(() => {
+        console.debug("register useEffect", register)
+    }, [register])
 
     return (
         <S.Wrapper>
