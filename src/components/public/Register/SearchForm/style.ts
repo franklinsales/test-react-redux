@@ -12,3 +12,8 @@ export const Wrapper = styled.div`
 export const SearchFormHeaderWrapper = styled.div`
     padding-top: 5%;
 `
+
+export const SearchFormBodyWrapper = styled.div`
+    width: 100%;
+    margin-top: 60px;
+`
