@@ -23,4 +23,12 @@ export const BoxContentWrapper = styled.div`
     border-radius: 10px;
 
     box-shadow: -1px -1px 13px 1px rgba(0,0,0,0.10);
+
+    @media(min-width: 1400px) {
+        width: 80%;
+    }
+
+    @media(min-height: 1000px) {
+        min-height: 70%;
+    }
 `

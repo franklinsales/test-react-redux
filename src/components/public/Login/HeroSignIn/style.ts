@@ -22,4 +22,11 @@ export const Wrapper = styled.div`
         color: #fff;
         font-size:20px;
     }
+
+    @media(min-width: 1000px) {
+        h1 {
+            font-size:90px;
+            line-height: 95px;
+        }
+    }
 `
