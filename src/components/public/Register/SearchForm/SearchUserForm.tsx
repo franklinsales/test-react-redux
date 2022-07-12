@@ -52,11 +52,15 @@ const SearchUserForm = () => {
             <S.SearchFormBodyWrapper>
                 <form onSubmit={submitFormHandler}>
                     <InputIcon
+                        data-cy="search_input_username"
                         icon="fa-solid fa-magnifying-glass"
                         name="search"
                         labelText="Search:"
                         onChange={usernameChangeHandler}/>
-                    <ButtonForm>Search User</ButtonForm>
+                    <ButtonForm
+                        data-cy="btn_search">
+                        Search
+                    </ButtonForm>
                 </form>
             </S.SearchFormBodyWrapper>
 
