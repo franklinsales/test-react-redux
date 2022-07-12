@@ -6,12 +6,15 @@ import * as S from './style'
 const Login = () => {
     return (
         <S.ContentWrapped>
+
             <S.FormWrappe>
                 <FormSignIn></FormSignIn>
             </S.FormWrappe>
+
             <S.HeroWrappe>
                 <HeroSignIn/>
             </S.HeroWrappe>
+            
         </S.ContentWrapped>
     )
 }
