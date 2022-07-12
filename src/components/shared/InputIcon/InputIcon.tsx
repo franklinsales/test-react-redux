@@ -10,7 +10,7 @@ const InputIcon = ({labelText, icon, marginBottom, marginTop, ...props}: IInputI
             <label> {labelText} </label>
             <S.WrapperInput>
                 <S.SpanWrapper><i className={icon}></i></S.SpanWrapper>
-                <S.InputWrapper type="text" placeholder="domain.tld" {...props}/> 
+                <S.InputWrapper type="text" {...props}/> 
             </S.WrapperInput>
         </S.Wrapper>
     )
