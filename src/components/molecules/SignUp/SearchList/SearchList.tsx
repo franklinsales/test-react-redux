@@ -1,14 +1,18 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import TableList from "../../../atoms/TableList"
 
+import { useSelector } from "react-redux"
+
 const SearchList = () => {
+    
+    const searchUser = useSelector((state: any) => state.searchUser.response)
 
     useEffect(() => {
-        console.debug("AI MEU OVO")
-    }, [])
+        console.debug("searchUser", searchUser)
+    }, [searchUser])
 
     return (
-        <TableList />
+        <TableList data={searchUser}/>
     )
 }
 

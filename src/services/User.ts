@@ -69,16 +69,22 @@ export const searchUsers = (payload:any): User[] => {
   console.debug("data", data)
 
   const usersStr = window.localStorage.getItem("users");
-  let users: User[] = []
+  const users: User[] = usersStr ? JSON.parse(usersStr) : usersStr;
+  
+  let usersResult: User[] = []
 
   if(!data.username){
-   return usersStr ? JSON.parse(usersStr) : usersStr;
+   return users
   }
 
-  users = users.filter((i)=>{
+  usersResult = users.filter((i:User)=>{
+    console.debug("i.username", i.username)
+    console.debug("data.username", data.username)
     return data.username === i.username
   })
 
-  return users
+  console.debug("users x",usersResult)
+
+  return usersResult
   
 }
