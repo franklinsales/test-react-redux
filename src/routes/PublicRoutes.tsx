@@ -1,7 +1,7 @@
 import { Route, BrowserRouter } from "react-router-dom"
 import { Routes } from "react-router-dom";
-import SignIn from "../pages/Public/SignIn";
-import SingUp from "../pages/Public/SignUp";
+import SignIn from "../pages/public/SignIn";
+import SingUp from "../pages/public/SignUp";
 
 const PublicRoutes = () => {
 

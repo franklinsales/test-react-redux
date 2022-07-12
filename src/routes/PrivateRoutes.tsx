@@ -1,7 +1,7 @@
 import { Route, RouteProps, BrowserRouter, Routes} from "react-router-dom";
 
-import Home from "../pages/Private/Home";
-import Redirect from "../pages/Private/Redirect";
+import Home from "../pages/private/Home";
+import Redirect from "../pages/private/Redirect";
 
 const PrivateRoutes: React.FC<RouteProps> = (props) => {
     return (
