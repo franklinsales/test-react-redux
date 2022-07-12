@@ -1,4 +1,4 @@
-import FormSignUp from './FormSignUp'
+import FormSignUp from './RegisterForm'
 import SearchUserForm from './SearchForm'
 import * as S from './style'
 

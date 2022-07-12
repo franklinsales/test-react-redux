@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react"
 
 import ButtonForm from "../../../atoms/ButtonForm"
@@ -7,9 +8,13 @@ import User from "../../../../types/User/User"
 import { useDispatch, useSelector } from "react-redux"
 import { registerUserAction } from "../../../../redux/actions/authenticationActions"
 
-import * as S from "./style"
+import H1Form from "../../../atoms/H1Form"
+import H1Subtitle from "../../../atoms/H1Subtitle"
 
-const SignUpFormBody = () => {
+import * as S from  './style'
+
+
+const RegisterForm = () => {
 
     const [formData, setFormData] = useState<User>({} as User)
     const dispatch = useDispatch()
@@ -43,14 +48,21 @@ const SignUpFormBody = () => {
 
     return (
         <S.Wrapper>
-            <form onSubmit={submitFormHandler}>
-                <InputIcon name="username" labelText="Username" onChange={usernameChangeHandler}></InputIcon>
-                <InputIcon name="password" labelText="Password" onChange={passwordChangeHandler}></InputIcon>
-                <InputIcon name="password-confirmation" labelText="Password Confirmation" onChange={passwordConfirmationChangeHandler}></InputIcon>
-                <ButtonForm type="submit">Sign Up</ButtonForm>
-            </form>
+            
+            <H1Form> Cadastre-se no MagicSys </H1Form>
+            <H1Subtitle> Basta informar o seu e-mail, senha e confirmar a senha para se cadastrar. </H1Subtitle>
+
+
+            <S.FormBodyWrapper>
+                <form onSubmit={submitFormHandler}>
+                    <InputIcon name="username" labelText="Username" onChange={usernameChangeHandler}></InputIcon>
+                    <InputIcon name="password" labelText="Password" onChange={passwordChangeHandler}></InputIcon>
+                    <InputIcon name="password-confirmation" labelText="Password Confirmation" onChange={passwordConfirmationChangeHandler}></InputIcon>
+                    <ButtonForm type="submit">Sign Up</ButtonForm>
+                </form>
+            </S.FormBodyWrapper>
         </S.Wrapper>
     )
 }
 
-export default SignUpFormBody
+export default RegisterForm
