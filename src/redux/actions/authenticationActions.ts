@@ -1,4 +1,4 @@
-import User from '../types/User/User';
+import User from '../../types/User/User';
 import * as types from './index';
 
 export const registerUserAction = (user:any) => {

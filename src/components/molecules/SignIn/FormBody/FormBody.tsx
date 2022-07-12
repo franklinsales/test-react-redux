@@ -5,7 +5,7 @@ import InputIcon from "../../../atoms/InputIcon"
 
 import User from "../../../../types/User/User"
 import { useDispatch, useSelector } from "react-redux"
-import { loginUserAction } from "../../../../actions/authenticationActions"
+import { loginUserAction } from "../../../../redux/actions/authenticationActions"
 
 import * as S from "./style"
 import { Link } from "react-router-dom"

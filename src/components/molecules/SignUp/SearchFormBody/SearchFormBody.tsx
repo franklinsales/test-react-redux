@@ -3,7 +3,7 @@ import InputIcon from "../../../atoms/InputIcon"
 import * as S from "./style"
 
 import { useDispatch, useSelector } from "react-redux"
-import { searchUserAction } from "../../../../actions/searchUser"
+import { searchUserAction } from "../../../../redux/actions/searchUser"
 import SearchUser from "../../../../types/SearchUser/SearchUser"
 import { useEffect, useState } from "react"
 

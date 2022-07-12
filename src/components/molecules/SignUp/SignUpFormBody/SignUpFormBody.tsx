@@ -5,7 +5,7 @@ import InputIcon from "../../../atoms/InputIcon"
 
 import User from "../../../../types/User/User"
 import { useDispatch, useSelector } from "react-redux"
-import { registerUserAction } from "../../../../actions/authenticationActions"
+import { registerUserAction } from "../../../../redux/actions/authenticationActions"
 
 import * as S from "./style"
 
