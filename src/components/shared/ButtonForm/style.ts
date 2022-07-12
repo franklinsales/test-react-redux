@@ -13,4 +13,8 @@ export const Wrapper = styled.button`
     display: inline-block;
 
     cursor: pointer;
+
+    &:disabled {
+        background: #dddddd !important;
+    }
 `
