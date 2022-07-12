@@ -82,10 +82,7 @@ const FormSignIn = () => {
                 </form>
                 <br/>
                 <div>
-                    Deseja criar um usuário? Acesse a página de  
-                    <Link to="/sign-up">
-                            Cadastro
-                    </Link>
+                    Deseja criar um usuário? <Link to="/sign-up"> Acesse a página de: Cadastro </Link>
                 </div>
             </S.FormBodyWrapper>
         </S.Wrapper>
