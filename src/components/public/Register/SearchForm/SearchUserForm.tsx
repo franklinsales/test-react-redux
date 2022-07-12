@@ -2,17 +2,17 @@ import { useEffect, useState } from "react"
 
 import * as S from  './style'
 
-import H1Form from "../../../atoms/H1Form"
-import H1Subtitle from "../../../atoms/H1Subtitle"
+import H1Form from "../../../shared/H1Form"
+import H1Subtitle from "../../../shared/H1Subtitle"
 
-import ButtonForm from "../../../atoms/ButtonForm"
-import InputIcon from "../../../atoms/InputIcon"
+import ButtonForm from "../../../shared/ButtonForm"
+import InputIcon from "../../../shared/InputIcon"
 
 import { useDispatch, useSelector } from "react-redux"
 import { searchUserAction } from "../../../../redux/actions/searchUser"
 import SearchUser from "../../../../types/SearchUser/SearchUser"
 
-import TableList from "../../../atoms/TableList"
+import TableList from "../../../shared/TableList"
 
 const SearchUserForm = () => {
 
