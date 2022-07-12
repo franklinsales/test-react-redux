@@ -1,10 +1,10 @@
+import Login from "../../components/public/Login"
 import LayoutBoxRounded from "../../components/templates/LayoutBoxRounded"
-import SignInTemplate from "../../components/templates/Public/SignInTemplate"
 
 const SignIn= () => {
     return(
         <LayoutBoxRounded>
-            <SignInTemplate />
+            <Login />
         </LayoutBoxRounded>
     )
 }

@@ -1,8 +1,8 @@
-import FormSignUp from '../../organisms/SignUp/FormSignUp'
-import SearchUserForm from '../../organisms/SignUp/SearchForm'
+import FormSignUp from './FormSignUp'
+import SearchUserForm from './SearchForm'
 import * as S from './style'
 
-const SignUpTemplate = () => {
+const Register = () => {
     return (
         <S.ContentWrapped>
             <S.FormWrappe>
@@ -15,4 +15,4 @@ const SignUpTemplate = () => {
     )
 }
 
-export default SignUpTemplate
+export default Register

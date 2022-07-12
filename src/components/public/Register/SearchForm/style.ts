@@ -8,3 +8,7 @@ export const Wrapper = styled.div`
     padding-left: 10%;
     padding-right: 10%;
 `
+
+export const SearchFormHeaderWrapper = styled.div`
+    padding-top: 5%;
+`

@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+    padding: 10%;
+`
+
+export const FormBodyWrapper = styled.div`
     width: 100%;
     margin-top: 60px;
 `

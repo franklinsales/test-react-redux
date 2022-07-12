@@ -1,8 +1,9 @@
-import FormSignIn from '../../organisms/SignIn/FormSignIn'
-import HeroSignIn from '../../organisms/SignIn/HeroSignIn'
+import FormSignIn from './FormSignIn'
+import HeroSignIn from './HeroSignIn'
 import * as S from './style'
 
-const SignInTemplate = () => {
+
+const Login = () => {
     return (
         <S.ContentWrapped>
             <S.FormWrappe>
@@ -15,4 +16,4 @@ const SignInTemplate = () => {
     )
 }
 
-export default SignInTemplate
+export default Login
