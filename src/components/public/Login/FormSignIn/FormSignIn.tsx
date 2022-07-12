@@ -35,10 +35,6 @@ const FormSignIn = () => {
         setFormData({...formData, password})
     }
 
-    useEffect(() => {
-        console.debug("login", login)
-    }, [login])
-
     return (
         <S.Wrapper>
             {/* Form Header */}
@@ -52,7 +48,6 @@ const FormSignIn = () => {
 
             {/* Form Body */}
             <S.FormBodyWrapper>
-                {login && console.debug("login template", login)}
                 <form onSubmit={submitFormHandler}>
 
                     <InputIcon

@@ -24,18 +24,13 @@ export const registerUserService = (payload:any): Register => {
 
   window.localStorage.setItem("users", JSON.stringify(users));
 
-  console.debug("final users", users)
   return {error: null, user: users}
   
 };
 
 export const loginUserService = (payload:any): Login | null => {
 
-  console.debug("loginUserService() called", payload)
-
   const data: User = payload.user
-
-  console.debug("data", data)
 
   const usersStr = window.localStorage.getItem("users");
   const users: User[] = usersStr ? JSON.parse(usersStr) : usersStr;
@@ -47,7 +42,6 @@ export const loginUserService = (payload:any): Login | null => {
     })
 
     if(usersResult.length > 0){
-      console.debug("users result", usersResult)
       loginResult = {error: null, user: usersResult[0]}
       return loginResult
     }else{
@@ -62,11 +56,8 @@ export const loginUserService = (payload:any): Login | null => {
 
 
 export const searchUsers = (payload:any): User[] => {
-  console.debug("searchUsers() called", payload)
 
   const data:SearchUser = payload.searchUser
-
-  console.debug("data", data)
 
   const usersStr = window.localStorage.getItem("users");
   const users: User[] = usersStr ? JSON.parse(usersStr) : usersStr;
@@ -78,12 +69,8 @@ export const searchUsers = (payload:any): User[] => {
   }
 
   usersResult = users.filter((i:User)=>{
-    console.debug("i.username", i.username)
-    console.debug("data.username", data.username)
     return data.username === i.username
   })
-
-  console.debug("users x",usersResult)
 
   return usersResult
   

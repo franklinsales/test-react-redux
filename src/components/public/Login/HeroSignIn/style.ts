@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
         font-size:20px;
     }
 
-    @media(min-width: 1000px) {
+    @media(min-width: 1920px) {
         h1 {
             font-size:90px;
             line-height: 95px;

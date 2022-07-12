@@ -9,7 +9,6 @@ export const registerUserAction = (user:any) => {
 };
 
 export const loginUserAction = (user:User) => {
-  console.debug("LOGIN USER ACTION")
   return {
     type: types.LOGIN_USER,
     user

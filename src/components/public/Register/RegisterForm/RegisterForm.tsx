@@ -57,10 +57,6 @@ const RegisterForm = () => {
         passwordConfirmationValidation("")
     }, [])
 
-    useEffect(() => {
-        console.debug("register useEffect", register)
-    }, [register])
-
     return (
         <S.Wrapper>
             
