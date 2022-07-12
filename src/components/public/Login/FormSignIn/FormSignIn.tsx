@@ -54,10 +54,29 @@ const FormSignIn = () => {
             <S.FormBodyWrapper>
                 {login && console.debug("login template", login)}
                 <form onSubmit={submitFormHandler}>
-                    <InputIcon name="username" labelText="Username:" onChange={usernameChangeHandler}></InputIcon>
-                    <InputIcon name="password" labelText="Password:" onChange={passwordChangeHandler}></InputIcon>
-                    <ButtonForm type={"submit"}>Sign In</ButtonForm>
+
+                    <InputIcon 
+                        onChange={usernameChangeHandler}
+                        labelText="Username:"
+                        data-cy="login_input_username"
+                        name="username" />
+
+                    <InputIcon 
+                        onChange={passwordChangeHandler}
+                        labelText="Password:"
+                        type="password"
+                        data-cy="login_input_password"
+                        name="password"/>
+
+                    <ButtonForm
+                        type={"submit"}
+                        data-cy="btn_login">
+                            Sign In
+                    </ButtonForm>
+
                     {login?.error === "user invalid" && <S.ErrorWrapper>Usuário inválido! Tente novamente.</S.ErrorWrapper>}
+
+                    {login?.user && <S.SuccessWrapper>Login Realizado com Sucesso.</S.SuccessWrapper>}
                 </form>
                 <br/>
                 <div>

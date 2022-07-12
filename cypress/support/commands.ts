@@ -35,3 +35,25 @@
 //     }
 //   }
 // }
+
+import 'cypress-localstorage-commands'
+import User from '../../src/types/User/User'
+
+Cypress.Commands.add('register', (username: string, password: string) => {
+
+    const usersStr = localStorage.getItem('users')
+    const users: User[] = usersStr ? JSON.parse(usersStr) : [];
+
+    const usersResult = users.filter((i:any)=>{
+        return username === i.username
+    })
+
+    if(usersResult.length > 0){
+        return
+    }  
+
+    users.push({id: (users.length) + 1, username, password})
+    
+    cy.setLocalStorage("users", JSON.stringify(users));
+    
+  });
