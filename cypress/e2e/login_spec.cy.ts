@@ -3,7 +3,7 @@
 import "cypress-localstorage-commands";
 
 describe('Login E2E Fail Test', () => {
-  it('Fill the username and password fields with an invalid username, check for invalid username message.', () => {
+  it('Fill the username and password fields with an invalid username, check for invalid message.', () => {
     cy.visit('http://localhost:3000/')
   
       // Get an input, type into it and verify that the value has been updated
@@ -21,6 +21,7 @@ describe('Login E2E Fail Test', () => {
 
 describe('Login E2E Success Test', () => {
   
+  // Create user before the test
   before(() => {
     cy.register('test1', '123')
     cy.saveLocalStorage();
@@ -30,7 +31,7 @@ describe('Login E2E Success Test', () => {
     cy.restoreLocalStorage();
   });
 
-  it('Fill the username and password fields with an invalid username, check for invalid username message.', () => {
+  it('Fill the username and password fields with an valid username, check for valid message.', () => {
     cy.visit('http://localhost:3000/')
   
       // Get an input, type into it and verify that the value has been updated
