@@ -55,13 +55,15 @@ const FormSignIn = () => {
                 {login && console.debug("login template", login)}
                 <form onSubmit={submitFormHandler}>
 
-                    <InputIcon 
+                    <InputIcon
+                        icon="fa-solid fa-user"
                         onChange={usernameChangeHandler}
                         labelText="Username:"
                         data-cy="login_input_username"
                         name="username" />
 
                     <InputIcon 
+                        icon="fa-solid fa-key"
                         onChange={passwordChangeHandler}
                         labelText="Password:"
                         type="password"

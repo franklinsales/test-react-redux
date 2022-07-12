@@ -1,14 +1,15 @@
 import * as S from "./style"
 interface IInputIcon extends S.IWrapper, React.ComponentPropsWithoutRef<"input">{
     labelText?: string
+    icon?: string
 }
 
-const InputIcon = ({labelText, marginBottom, marginTop, ...props}: IInputIcon) => {
+const InputIcon = ({labelText, icon, marginBottom, marginTop, ...props}: IInputIcon) => {
     return (
         <S.Wrapper marginBottom={marginBottom} marginTop={marginTop}>
             <label> {labelText} </label>
             <S.WrapperInput>
-                <S.SpanWrapper>https://</S.SpanWrapper>
+                <S.SpanWrapper><i className={icon}></i></S.SpanWrapper>
                 <S.InputWrapper type="text" placeholder="domain.tld" {...props}/> 
             </S.WrapperInput>
         </S.Wrapper>

@@ -13,10 +13,11 @@ import H1Subtitle from "../../../shared/H1Subtitle"
 
 import * as S from  './style'
 
-
 const RegisterForm = () => {
 
     const [formData, setFormData] = useState<User>({} as User)
+    const [errorValidation, setErrorValidation] = useState<string>("")
+
     const dispatch = useDispatch()
     const register = useSelector((state: any) => state.register.response)
 
@@ -38,8 +39,11 @@ const RegisterForm = () => {
     const passwordConfirmationChangeHandler = (e: any) => {
         const passwordConfirmation = e.target.value
         if(passwordConfirmation !== formData.password){
-            console.error("Password and Password Confirmation are not equal")
+            setErrorValidation("Password and Password Confirmation are not equal")
+            return
         }
+
+        setErrorValidation("")
     }
 
     useEffect(() => {
@@ -55,10 +59,30 @@ const RegisterForm = () => {
 
             <S.FormBodyWrapper>
                 <form onSubmit={submitFormHandler}>
-                    <InputIcon name="username" labelText="Username" onChange={usernameChangeHandler}></InputIcon>
-                    <InputIcon name="password" labelText="Password" onChange={passwordChangeHandler}></InputIcon>
-                    <InputIcon name="password-confirmation" labelText="Password Confirmation" onChange={passwordConfirmationChangeHandler}></InputIcon>
-                    <ButtonForm type="submit">Sign Up</ButtonForm>
+                    <InputIcon 
+                        icon="fa-solid fa-user"
+                        name="username"
+                        labelText="Username"
+                        onChange={usernameChangeHandler}/>
+
+                    <InputIcon 
+                        icon="fa-solid fa-key"
+                        name="password"
+                        labelText="Password"
+                        onChange={passwordChangeHandler}/>
+
+                    <InputIcon 
+                        icon="fa-solid fa-key"
+                        name="password-confirmation"
+                        labelText="Password Confirmation"
+                        onChange={passwordConfirmationChangeHandler}/>
+                        
+                    <ButtonForm type="submit" disabled={errorValidation ? true : false}>Sign Up</ButtonForm>
+                    
+
+                    {register?.error === null && <S.SuccessWrapper> Cadastro Realizado com Sucesso! </S.SuccessWrapper>}
+                    {register?.error && <S.ErrorWrapper> Erro ao tentar cadastrar </S.ErrorWrapper>}
+                    {errorValidation && <S.ErrorWrapper> {errorValidation} </S.ErrorWrapper>}
                 </form>
             </S.FormBodyWrapper>
         </S.Wrapper>
