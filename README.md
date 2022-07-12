@@ -8,7 +8,7 @@ This project simulates the front-end logic to implement a login and user registr
 - User Registration
 - User Listing/Search
 
-## Get Started
+## Getting Started
 
 - Clone the project
 - Access the project root and run `npm install`
