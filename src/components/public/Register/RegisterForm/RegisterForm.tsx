@@ -70,6 +70,7 @@ const RegisterForm = () => {
                         icon="fa-solid fa-user"
                         name="username"
                         labelText="Username:"
+                        data-cy="register_input_username"
                         onChange={usernameChangeHandler}/>
 
                     <InputIcon 
@@ -77,6 +78,7 @@ const RegisterForm = () => {
                         icon="fa-solid fa-key"
                         name="password"
                         labelText="Password:"
+                        data-cy="register_input_password"
                         onChange={passwordChangeHandler}/>
 
                     <InputIcon
@@ -84,9 +86,15 @@ const RegisterForm = () => {
                         icon="fa-solid fa-key"
                         name="password-confirmation"
                         labelText="Password Confirmation:"
+                        data-cy="register_input_password_confirmation"
                         onChange={passwordConfirmationChangeHandler}/>
 
-                    <ButtonForm type="submit" disabled={errorValidation ? true : false}>Sign Up</ButtonForm>
+                    <ButtonForm 
+                        type="submit" 
+                        data-cy="btn_register"
+                        disabled={errorValidation ? true : false}>
+                            Sign Up
+                    </ButtonForm>
 
                     <br/><br/>
                     <div>
