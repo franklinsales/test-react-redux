@@ -19,14 +19,15 @@ const SearchUserForm = () => {
     const [userSearch, setUserSearch] = useState<SearchUser>({} as SearchUser)
     const dispatch = useDispatch()
     const searchUser = useSelector((state: any) => state.searchUser.response)
+    const register = useSelector((state: any) => state.register.response)
     
     useEffect(() => {
         dispatch(searchUserAction(userSearch))
     }, [])
 
     useEffect(() => {
-        console.debug("searchUser", searchUser)
-    }, [searchUser])
+        dispatch(searchUserAction(userSearch))
+    }, [register])
 
     const submitFormHandler = (e:any) => {
         e.preventDefault()
